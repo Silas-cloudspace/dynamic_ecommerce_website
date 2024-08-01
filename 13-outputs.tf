@@ -7,7 +7,7 @@ value = aws_subnet.public_subnet_az1.id
 }
 
 output "website_url" {
-value = join ("",["https://", "www", ".", "silas-teixeira"])
+value = join ("",["https://", "www", ".", "your domain name"])
 }
 
 # "www" is the name we picked in the "aws_reoute53_record"

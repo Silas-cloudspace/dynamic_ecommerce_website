@@ -70,7 +70,7 @@ resource "aws_lb_listener" "alb_https_listener" {
   protocol          = "HTTPS"
   ssl_policy        = "ELBSecurityPolicy-2016-08"
   certificate_arn   = "arn:aws:acm:eu-west-2:381491868231:certificate/dfac8c6a-aff4-450b-876f-eb24f65d33e1"
-
+# check the certificate arn on the aws console (acm certificates)
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.alb_target_group.arn

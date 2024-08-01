@@ -9,7 +9,7 @@ resource "aws_sns_topic" "user_updates" {
 resource "aws_sns_topic_subscription" "notification_topic" {
   topic_arn = aws_sns_topic.user_updates.arn
   protocol  = "email"
-  endpoint  = "silas.cloudspace@gmail.com"
+  endpoint  = "choose a email to where notifications will be sent"
 }
 
 # Remember to go to your email and confirm subscription

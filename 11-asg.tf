@@ -2,7 +2,7 @@
 resource "aws_key_pair" "generated_key_pair" {
   key_name   = "ec2_key"  # This should be a simple name without special characters
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJY9ZInM62Es7HqXfSRASeT1zL07orcsvT3kQl4MVJHTj4/X+S1S7EvNH5OZk1U19WzjTOHIrs2q1QYyZRSEzMu88IALtlHqvdknSezbr291GuNHzftsaa1oVBPIyvX+zFDitlQtbMvgaT0n64IGfwDf8C0vo8VcYNYebX8cks+CFnHGizyTa9EJJYcXpgPebo+v0g1bORCc9ETof437jRIMO7KE2ZGUujTET4MY13C7xzkjgquTz4q22f1kmgwXNTUKuq7yZjwGpsdu3a7sW6VdevsB5kHZq2ZYdn/uqqRnaBvS+s71Tz0iAyl4tZxe+UCDhWoUrxddjIg7uxQH5x silas@Silas"
-  # Ensure the public key is correctly formatted and valid
+  # Ensure the public key is correctly formated and valid
 }
 
 # Define the launch template
@@ -10,7 +10,7 @@ resource "aws_launch_template" "webserver_launch_template" {
   name          = "dev-launch-template"
   image_id      = "ami-046d5130831576bbb"
   instance_type = "t2.micro"
-  key_name      = aws_key_pair.generated_key_pair.key_name  # Use the key_name defined in aws_key_pair
+  key_name      = aws_key_pair.generated_key_pair.key_name
   description   = "launch template for asg"
 
   monitoring {
